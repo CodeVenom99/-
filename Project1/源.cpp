@@ -1,6 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
+int Fibonacci(int num)
+{
+	if (num == 1)
+	{
+		return 1;
+	}
+	else if (num == 2)
+	{
+		return 2;
+	}
+	else
+		return func(num - 1) + func(num - 2);
+
+}
 void Hanoi(int num, char x, char y, char z)//将num从第哪个柱子（x）借助第哪个柱子（y）移到第哪个柱子（z）
 {											
 	if (num == 1)
@@ -40,7 +54,8 @@ int sum(int num)//1+2+3+4+..........
 void test01()
 {
 	int n = 5;
-	Hanoi(3, 'A', 'B', 'C');//A代表第一个柱子，B代表第二个柱子，C代表第三个柱子
+	//Hanoi(3, 'A', 'B', 'C');//A代表第一个柱子，B代表第二个柱子，C代表第三个柱子
+	printf("斐波那契第三个数是：%d\r\n", Fibonacci(5));
 	//printf("%d的阶乘为：%d\r\n", n,Factorial(n));
 	//printf("1到%d的和为：%d\r\n", n,sum(n));
 }
